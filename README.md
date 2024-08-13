@@ -62,4 +62,24 @@ and provide the PYTHON_FILE_NAME variable relative to the home directory. For ex
 Python file called sim.py is in a directory called simulation, then your PYTHON_FILE_NAME 
 variable should be simulation/sim.py.
 
+## Submit Your Job
+
+Navigate to the directory where you saved you job submission script and submit the job using the
+following `sbatch` command:
+
+```bash
+sbatch <job-submission-script.sh>
+```
+
+When you submit a job to the Slurm scheduler, it will process the request and execute the job 
+within the specified containerized environment. The output of the job will be written to a file
+named slurm-<job-id>.out, where you can review the results and any printed output.
+
+## Admin's Final Notes
+
+I strongly encourage you to read the Slurm documentation for `sinfo`, `squeue`, `srun`, `sbatch`, 
+as well as a documentation for `scp` for writing the code in your environment and faster file 
+transfers between your computers and the server. Familiarizing yourself with these commands will
+deepen your understanding of Slurm. Feel free to contact me related to errors you encounter or 
+with any suggestions for system improvements.
 
