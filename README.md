@@ -31,13 +31,11 @@ Create a new file and copy paste the content below:
 #SBATCH --gpus=1
 #SBATCH --cpus-per-gpu=8
 #SBATCH --mem-per-gpu=40G
-#SBATCH --container-mounts /home/your-username:/mnt/your-username
-#SBATCH --job-name=your-username
-cd /mnt/your-username
+#SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>
+#SBATCH --job-name=<your-username>
+cd /mnt/<your-username>
 
-PYTHON_FILE_NAME="file_name.py"
-
-source /opt/python3/venv/base/bin/activate
+PYTHON_FILE_NAME="<file_name.py>"
 
 # Run the Python file
 python3 $PYTHON_FILE_NAME
@@ -56,4 +54,12 @@ job unnecessarily.
 - `#SBATCH --cpus-per-gpu=8`: Specifies that each GPU should access 8 CPU cores.
 
 - `#SBATCH --mem-per-gpu=40G`: Allocates 40 GB of RAM per GPU.
+
+- `#SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>`: Mounts your home 
+directory to the container, allowing the container to access files from your home directory.
+**Note**: Thus, keep your job submission script, like the one above, in your home directory
+and provide the PYTHON_FILE_NAME variable relative to the home directory. For example, if your
+Python file called sim.py is in a directory called simulation, then your PYTHON_FILE_NAME 
+variable should be simulation/sim.py.
+
 
