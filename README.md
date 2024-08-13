@@ -43,3 +43,17 @@ source /opt/python3/venv/base/bin/activate
 python3 $PYTHON_FILE_NAME
 ```
 
+Here is a brief explanation of the Slurm directives:
+
+- `#SBATCH --container-image ghcr.io\#netlab-cluster/default`: Specifies the 
+container image to be used for the job. This image includes CUDA support, pytorch,
+numpy, and pandas.
+
+- `#SBATCH --gpus=1`: Requests one GPU for the job. **Note**: If your job does not require a GPU,
+you are advised not to include this command and, thus, not to allocate any GPUs to your Slurm 
+job unnecessarily.
+
+- `#SBATCH --cpus-per-gpu=8`: Specifies that each GPU should access 8 CPU cores.
+
+- `#SBATCH --mem-per-gpu=40G`: Allocates 40 GB of RAM per GPU.
+
