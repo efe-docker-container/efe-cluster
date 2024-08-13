@@ -13,7 +13,7 @@ You will be able to access the server using `ssh` after establishing a connectio
 to the VPN service.
 
 ```bash
-ssh name-surname@79.123.176.180
+ssh <name-surname>@79.123.176.180
 ```
 
 You will be asked for a password. This is the password you are provided with.
