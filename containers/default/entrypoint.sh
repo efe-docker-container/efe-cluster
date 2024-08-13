@@ -1,3 +1,3 @@
 #!/bin/bash
-source /opt/python3/venv/base/bin/activate
+# source /opt/python3/venv/base/bin/activate
 exec "$@"
