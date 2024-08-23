@@ -78,7 +78,7 @@ named slurm-<job-id>.out, where you can review the results and any printed outpu
 ## Admin's Final Notes
 
 I strongly encourage you to read the Slurm documentation for `sinfo`, `squeue`, `srun`, `sbatch`, 
-as well as a documentation for `scp` for writing the code in your environment and faster file 
+`scancel`, as well as a documentation for `scp` for writing the code in your environment and faster file 
 transfers between your computers and the server. Familiarizing yourself with these commands will
 deepen your understanding of Slurm. Feel free to contact me related to errors you encounter or 
 with any suggestions for system improvements.
