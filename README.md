@@ -20,6 +20,9 @@ You will be asked for a password. This is the password you are provided with.
 For convenience you can import your ssh key to the server via `ssh-import-id`.
 Thus, you will be able to login without a password if one of your SSH keys on
 your computer matches with the one on the server.
+_NOTE: Before using `ssh-import-id` please read [doc1](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+and [doc2](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+carefully._
 
 ## An Example Slurm Script
 
@@ -29,7 +32,7 @@ Create a new file and copy paste the content below:
 #!/bin/bash
 #SBATCH --container-image ghcr.io\#netlab-cluster/default
 #SBATCH --gpus=1
-#SBATCH --cpus-per-gpu=8
+#SBATCH --cpus-per-gpu=4
 #SBATCH --mem-per-gpu=40G
 #SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>
 #SBATCH --job-name=<your-username>
