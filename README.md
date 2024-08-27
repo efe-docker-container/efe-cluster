@@ -20,11 +20,12 @@ You will be asked for a password. This is the password you are provided with.
 For convenience you can import your ssh key to the server via `ssh-import-id`.
 Thus, you will be able to login without a password if one of your SSH keys on
 your computer matches with the one on the server.
-_NOTE: Before using `ssh-import-id` please read [doc1](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+_NOTE: Before using `ssh-import-id`, please read [doc1](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 and [doc2](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 carefully._
 
-## An Example Slurm Script
+## Example Slurm Scripts
 
 Create a new file and copy paste the content below:
 
@@ -36,6 +37,7 @@ Create a new file and copy paste the content below:
 #SBATCH --mem-per-gpu=40G
 #SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>
 #SBATCH --job-name=<your-username>
+
 cd /mnt/<your-username>
 
 PYTHON_FILE_NAME="<file_name.py>"
@@ -64,6 +66,24 @@ directory to the container, allowing the container to access files from your hom
 and provide the PYTHON_FILE_NAME variable relative to the home directory. For example, if your
 Python file called sim.py is in a directory called simulation, then your PYTHON_FILE_NAME 
 variable should be simulation/sim.py.
+
+Below is an example script whose job does not use any gpu, but uses cpus:
+
+```bash
+#!/bin/bash
+#SBATCH --container-image ghcr.io\#netlab-cluster/default
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=40G
+#SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>
+#SBATCH --job-name=<your-username>
+
+cd /mnt/<your-username>
+
+PYTHON_FILE_NAME="<file_name.py>"
+
+# Run the Python file
+python3 $PYTHON_FILE_NAME
+```
 
 ## Submit Your Job
 
