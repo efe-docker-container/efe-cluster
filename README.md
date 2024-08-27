@@ -56,7 +56,7 @@ numpy, and pandas.
 you are advised not to include this command and, thus, not to allocate any GPUs to your Slurm 
 job unnecessarily.
 
-- `#SBATCH --cpus-per-gpu=8`: Specifies that each GPU should access 8 CPU cores.
+- `#SBATCH --cpus-per-gpu=4`: Specifies that each GPU should access 8 CPU cores.
 
 - `#SBATCH --mem-per-gpu=40G`: Allocates 40 GB of RAM per GPU.
 
