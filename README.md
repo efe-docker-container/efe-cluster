@@ -36,7 +36,7 @@ Create a new file and copy paste the content below:
 #SBATCH --cpus-per-gpu=4
 #SBATCH --mem-per-gpu=40G
 #SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>
-#SBATCH --job-name=<your-username>
+#SBATCH --job-name=<a-job-descriptive-name>
 
 cd /mnt/<your-username>
 
@@ -75,7 +75,7 @@ Below is an example script whose job does not use any gpu, but uses cpus:
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=40G
 #SBATCH --container-mounts /home/<your-username>:/mnt/<your-username>
-#SBATCH --job-name=<your-username>
+#SBATCH --job-name=<a-job-descriptive-name>
 
 cd /mnt/<your-username>
 
