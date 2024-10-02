@@ -2,3 +2,4 @@ numpy==1.25.1
 pandas==2.0.3
 matplotlib
 h5py==3.11.0
+wandb
