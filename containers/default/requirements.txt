@@ -4,4 +4,4 @@ matplotlib
 h5py==3.11.0
 wandb
 hydra-core
-sklearn
+scikit-learn
