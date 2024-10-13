@@ -5,3 +5,4 @@ h5py==3.11.0
 wandb
 hydra-core
 scikit-learn
+scipy
