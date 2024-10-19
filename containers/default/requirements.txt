@@ -7,3 +7,4 @@ hydra-core
 scikit-learn
 scipy
 onnx
+convnd
