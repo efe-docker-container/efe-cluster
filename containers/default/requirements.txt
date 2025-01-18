@@ -8,3 +8,4 @@ scikit-learn
 scipy
 onnx
 python-dotenv
+torch_geometric
