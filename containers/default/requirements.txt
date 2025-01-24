@@ -9,3 +9,4 @@ scipy
 onnx
 python-dotenv
 torch_geometric
+transformers
