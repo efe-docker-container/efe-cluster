@@ -11,3 +11,4 @@ python-dotenv
 torch_geometric
 transformers
 healpy
+geomloss
