@@ -12,3 +12,4 @@ torch_geometric
 transformers
 healpy
 geomloss
+pykeops
