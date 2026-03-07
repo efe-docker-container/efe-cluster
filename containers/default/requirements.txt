@@ -13,3 +13,4 @@ transformers
 healpy
 geomloss
 pykeops
+xgboost
